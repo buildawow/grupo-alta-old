@@ -223,9 +223,9 @@
 
                             <div class="grid-item" v-for="company in companies">
                                 <img v-bind:src="company.image" v-bind:alt="company.name">
-                                <div class="grid-item-overlay">
+                                <a target="_blank" v-bind:href="company.url" class="grid-item-overlay">
                                     <img v-bind:src="company.logo" alt="Casa Palopo logo">
-                                </div>
+                                </a>
                             </div>
 
 
