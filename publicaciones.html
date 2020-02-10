@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Gelasio:400,700|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
-<body class="">
+<body>
 
     <nav class="navbar-fullscreen">
 
@@ -56,16 +56,16 @@
         <div class="navbar-active-page-links">
             <ul>
                 <li>
-                    <a href="our-team.html">Nosotros</a>
+                    <a href="nosotros.html">Nosotros</a>
                 </li>
                 <li>
-                    <a href="social-responsability.html">Responsabilidad social</a>
+                    <a href="responsabilidad-social.html">Responsabilidad social</a>
                 </li>
                 <li>
-                    <a href="publications.html">Publicaciones</a>
+                    <a href="publicaciones.html">Publicaciones</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contacto</a>
+                    <a href="contacto.html">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -111,7 +111,7 @@
 
     </nav>
 
-    <div class="grid-container" id="app">
+    <div class="grid-container">
 
         <nav class="navbar">
 
@@ -157,79 +157,36 @@
 
         </nav>
 
-        <div class="content">
+        <div class="content" id="app">
 
-            <div class="our-team-layout">
-                
-                <div class="our-team-company-bio-title">
-                    <div>
-                        <h2>Grupo Alta</h2>
-                        <p>Todo hecho con amor y en familia. <br><span>100% guatemalteco.</span></p>
-                    </div>
+            <div class="publications-layout">
+
+                <div class="publication-title">
+                    <h1>Publicaciones</h1>
                 </div>
 
-                <div class="our-team-company-bio-text">
-                    <p>
-                        Grupo en la industria de la hospitalidad, con fin de crear marcas energéticas. 
-                        Constantemente a la vanguardia de la gastronomía, el diseño, la moda y el entretenimiento. 
-                        A través del trabajo en equipo cultivamos caminos de innovación y curamos experiencias únicas para los ciudadanos del mundo.
-                    </p>
-                </div>
+                <div class="publication-grid">
 
-                <div class="our-team-title">
-                    <h1>Nuestro equipo</h1>
-                </div>
-
-                <div class="our-team-members">
-
-                    <!-- Portrait -->
-
-                    <div class="portrait" v-for="member in members">
-    
-                        <figure>
-                            <img v-bind:src="member.image" v-bind:alt="member.name">
-                        </figure>
-    
-                        <div class="overlay"></div>
-
-                        <div class="portrait-data">
-                            <div class="name">
-                                <h2>{{ member.name }}</h2>
-                                <p class="position">{{ member.position }}</p>
-                            </div>
-                            <span v-if="member.info !== ''" class="border"></span>
-                            <p class="bio">
-                                {{ member.info }}
-                            </p>
+                    <div class="publication-block" v-for="publication in publications">
+                        <div class="black-pill">
+                            <span>{{ publication.name }}</span> 
+                            <span v-if="publication.year !== ''" class="divider">|</span>
+                            <span>{{ publication.year }}</span>
                         </div>
-    
+                        <p>{{ publication.content }}</p>
+                        <a v-bind:href="publication.url" class="source">{{ publication.source }}</a>
                     </div>
-
-                    <!-- End Portrait -->
 
                 </div>
 
-                <div class="our-team-join-us-text">
-                    <div>
-                        <h2>Forma parte de nuestro equipo</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, doloribus?</p>
-                        <br>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, assumenda.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, dolor?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, exercitationem.
-                        </p>
-                    </div>
-                </div>
+                <div class="publication-images">
+                    
+                    <img src="./src/images/publications/1.jpg" alt="Casa Palopo">
 
-                <div class="our-team-join-us-form">
-                    <form action="">
-                        <input type="text" name="nombre" placeholder="Nombre y apellido">
-                        <input type="email" name="email" placeholder="Correo electrónico">
-                        <input type="phone" name="telefono" placeholder="Teléfono">
-                        <input type="text" name="puesto" placeholder="Puesto al que aplica">
-                        <a href="#">Enviar</a>
-                    </form>
+                    <img class="w-70" src="./src/images/publications/2.jpg" alt="La esquina">
+
+                    <img src="./src/images/publications/3.jpg" alt="Helado Adela">
+
                 </div>
 
             </div>
@@ -302,8 +259,8 @@
     <script src="./src/js/scripts.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
-    <script src="./src/js/our-team.js"></script>
+
+    <script src="./src/js/data.js"></script>
 
 </body>
 </html>

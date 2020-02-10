@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grupo Alta | Nuestro equipo</title>
+    <title>Grupo Alta | Contacto</title>
     <link href="https://fonts.googleapis.com/css?family=Gelasio:400,700|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
@@ -56,16 +56,16 @@
         <div class="navbar-active-page-links">
             <ul>
                 <li>
-                    <a href="our-team.html">Nosotros</a>
+                    <a href="nosotros.html">Nosotros</a>
                 </li>
                 <li>
-                    <a href="social-responsability.html">Responsabilidad social</a>
+                    <a href="responsabilidad-social.html">Responsabilidad social</a>
                 </li>
                 <li>
-                    <a href="publications.html">Publicaciones</a>
+                    <a href="publicaciones.html">Publicaciones</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contacto</a>
+                    <a href="contacto.html">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -157,36 +157,32 @@
 
         </nav>
 
-        <div class="content" id="app">
+        <div class="content">
 
-            <div class="publications-layout">
-
-                <div class="publication-title">
-                    <h1>Publicaciones</h1>
+            <div class="contact-layout">
+                
+                <div class="contact-text">
+                <div>
+                    <h1>Contáctanos</h1>
+                    <p>
+                        Email.  info@grupoalta.com.gt
+                    </p>
+                    <p>T. 2374-5000</p>
+                    <p>
+                        Facebook <span>•</span> Instagram
+                    </p>
+                    <a href="#">Forma parte de nuestro equipo</a>
+                </div>
                 </div>
 
-                <div class="publication-grid">
-
-                    <div class="publication-block" v-for="company in companies">
-                        <div class="black-pill">
-                            <span>{{ company.name }}</span> 
-                            <span v-if="company.year !== ''" class="divider">|</span>
-                            <span>{{ company.year }}</span>
-                        </div>
-                        <p>{{ company.content }}</p>
-                        <a v-bind:href="company.url" class="source">{{ company.source }}</a>
-                    </div>
-
-                </div>
-
-                <div class="publication-images">
-                    
-                    <img src="./src/images/publications/1.jpg" alt="Casa Palopo">
-
-                    <img class="w-70" src="./src/images/publications/2.jpg" alt="La esquina">
-
-                    <img src="./src/images/publications/3.jpg" alt="Helado Adela">
-
+                <div class="contact-form">
+                    <form action="">
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <input type="email" name="email" placeholder="Correo electrónico">
+                        <input type="phone" name="telefono" placeholder="Teléfono">
+                        <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escribe tu comentario o duda acá"></textarea>
+                        <a href="#">Enviar</a>
+                    </form>
                 </div>
 
             </div>
@@ -257,10 +253,5 @@
     
 <!-- ------------------------------- Scripts ------------------------------- -->
     <script src="./src/js/scripts.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <script src="./src/js/publications.js"></script>
-
 </body>
 </html>

@@ -2,6 +2,27 @@ new Vue({
     el: '#app',
     data: {
         companies: [
+            {name: 'Casa Palopo', image: './src/images/landing/casapalopo_grid@2x.jpg', logo: './src/images/logos/logo_casapalopo_white.svg', url: 'https://www.casapalopo.com/es/habitaciones'},
+            {name: 'La Esquina',  image: './src/images/landing/laesquina_grid@2x.jpg',  logo: './src/images/logos/logo_laesquina_white.svg', url: 'https://www.mercaditolaesquina.com/'},
+            {name: 'Adela',       image: './src/images/landing/adela_grid@2x.jpg',      logo: './src/images/logos/logo_adela_white.svg', url: 'https://www.heladosadela.com/'},
+            {name: 'Bizu',        image: './src/images/landing/bizu_grid@2x.jpg',       logo: './src/images/logos/logo_bizu_white.svg', url: 'https://shopbizu.com/'},
+            {name: 'Queseso',     image: './src/images/landing/queseso_grid@2x.jpg',    logo: './src/images/logos/logo_queseso_white.svg', url: 'https://www.facebook.com/quesesogt/'},
+            {name: 'SBT',         image: './src/images/landing/sbt_grid@2x.jpg',        logo: './src/images/logos/logo_sbt_white.svg', url: '#'},
+        ],
+        members: [
+            {name: 'Claudia Bosch',     image: './src/images/our-team/claudia@2x.jpg',  position: 'Presidenta',                         info: 'Nuestra fundadora, la cabeza del grupo. Emprendedora y líder de un grupo experto en nuevas experiencias.'},
+            {name: 'Marcela Bosch',     image: './src/images/our-team/marcela@2x.jpg',  position: 'Director SBT',                       info: ''},
+            {name: 'Katina Bosch',      image: './src/images/our-team/katina@2x.jpg',   position: 'Directora BIZÚ',                     info: ''},
+            {name: 'Isabel Bosch',      image: './src/images/our-team/Isabel@2x.jpg',   position: 'Project Manager',                    info: ''},
+            {name: 'Rocio de la peña',  image: './src/images/our-team/rocio@2x.jpg',    position: 'Directora Ejecutiva',                info: ''},
+            {name: 'Gabriela Estrada',  image: './src/images/our-team/gabriela@2x.jpg', position: 'Cordinadora de Recursos Humanos',    info: 'Mejora Continua'},
+            {name: 'Eduardo Gonzales',  image: './src/images/our-team/eduardo@2x.jpg',  position: 'Chef Corporativo',                   info: 'Transparencia'},
+            {name: 'Carmen Ochoa',      image: './src/images/our-team/carmen@2x.jpg',   position: 'Gerente Residente Casa Palopó',      info: 'Salud Integral'},
+            {name: 'Paula Lehnoff',     image: './src/images/our-team/paula@2x.jpg',    position: 'Directora de Mercadeo',              info: 'Transparencia'},
+            {name: 'Megan Skinner',     image: './src/images/our-team/Megan@2x.jpg',    position: 'Responsabilidad Social',             info: 'Agradecimiento'},
+            
+        ],
+        publications: [
             {
                 name: 'Casa Palopó', year: 'Top 2018', 
                 content: '7 Luxury Hotels to Witness Natural Wonders from Your Room', 
@@ -204,5 +225,12 @@ new Vue({
                 source: 'Bloomberg'
             },
         ]
+    },
+    computed: {
+        randomPublications: function() {
+            return this.publications.sort(function(){return .5 - Math.random()}).slice(0,3)
+
+        }
     }
-})  
+    
+})

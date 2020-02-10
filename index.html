@@ -12,7 +12,7 @@
 
     <nav class="navbar-fullscreen">
 
-        <nav class="navbar-active">
+        <div class="navbar-active">
 
             <a href="index.html">
                 <img id="logo" class="logo" src="./src/images/logos/logo_grupoalta_black.svg" alt="Logo">
@@ -20,7 +20,7 @@
         
             <a id="btn-menu" class="btn-menu" href="#" onclick="showActiveMenu()">CERRAR</a>
         
-        </nav>
+        </div>
 
         <div class="navbar-active-title">
             Nuestras empresas
@@ -56,16 +56,16 @@
         <div class="navbar-active-page-links">
             <ul>
                 <li>
-                    <a href="our-team.html">Nosotros</a>
+                    <a href="nosotros.html">Nosotros</a>
                 </li>
                 <li>
-                    <a href="social-responsability.html">Responsabilidad social</a>
+                    <a href="responsabilidad-social.html">Responsabilidad social</a>
                 </li>
                 <li>
-                    <a href="publications.html">Publicaciones</a>
+                    <a href="publicaciones.html">Publicaciones</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contacto</a>
+                    <a href="contacto.html">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -251,7 +251,7 @@
 
                         </div>
 
-                        <div class="publication-block" v-for="publication in publications">
+                        <div class="publication-block" v-for="publication in randomPublications">
                             <div class="black-pill">
                                 <span>{{ publication.name }}</span> 
                                 <span v-if="publication.year !== ''" class="divider">|</span>
@@ -376,6 +376,6 @@
 <!-- ------------------------------- Scripts ------------------------------- -->
     <script src="./src/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="./src/js/landing.js"></script>
+    <script src="./src/js/data.js"></script>
 </body>
 </html>
