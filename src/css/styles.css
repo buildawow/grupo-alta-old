@@ -289,7 +289,6 @@ a {
     height: 33px;
     width: 50px;
 }
-
 /* --------------------------------- Footer --------------------------------- */
 footer.footer {
     background-color: black;
@@ -617,7 +616,6 @@ footer.footer .logo-footer {
     padding: 15px 30px;
     outline-color: white;
 }
-
 /* -------------------------------------------------------------------------- */
 /*                            Social Responsability                           */
 /* -------------------------------------------------------------------------- */
@@ -667,17 +665,17 @@ footer.footer .logo-footer {
     display: block;
     width: 50%;
     margin: 0 10px;
-  }
-  .social-responsability-card figure {
+}
+.social-responsability-card figure {
     margin: 0;
-  }
-  .social-responsability-card img {
+}
+.social-responsability-card img {
     /* height: auto; */
     vertical-align: top;
-  }
-  .social-responsability-card-bg {
-      width: 100%;
-  }
+}
+.social-responsability-card-bg {
+    width: 100%;
+}
   .social-responsability-card .overlay {
     background: rgba(0,0,0, .4);
     position: absolute;
@@ -694,12 +692,12 @@ footer.footer .logo-footer {
     color: white;
     text-align: center;
     transition: all .3s;
-  }
+}
   .social-responsability-card:hover .overlay {
     visibility: visible;
     opacity: 1;
     transition: all .3s;
-  }
+}
   .social-responsability-card .logo,
   .social-responsability-card a {
     color: white;
@@ -710,7 +708,7 @@ footer.footer .logo-footer {
     text-align: center;
     display: inline-block;
     margin-top: 30px;
-  }
+}
 /* -------------------------------------------------------------------------- */
 /*                                 Publication                                */
 /* -------------------------------------------------------------------------- */
@@ -793,7 +791,6 @@ footer.footer .logo-footer {
     text-align: left;
     margin-top: 5px;
 }
-
 /* -------------------------------------------------------------------------- */
 /*                                   Landing                                  */
 /* -------------------------------------------------------------------------- */
@@ -1042,6 +1039,127 @@ footer.footer .logo-footer {
 }
 .instagram-title {
     display: none;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  Internal                                  */
+/* -------------------------------------------------------------------------- */
+.internal-layout .container {
+    max-width: 1360px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+.internal-layout .hero {
+    width: 100%;
+    background: url('../images/internal/banners/img_hero_adela@2x.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.internal-layout .hero .container {
+    height: 700px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.internal-layout .hero .container .brand {
+    height: 410px;
+    width: 31%;
+    position: relative;
+}
+.internal-layout .hero .container .brand img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: -80px;
+}
+.internal-layout .main-content {
+    width: 100%;
+}
+.internal-layout .main-content .container {
+    max-width: 1360px;
+    padding: 0 40px;
+    margin: 0 auto;
+    height: 700px;
+}
+.internal-layout .main-content .container .layout {
+    display: grid;
+    grid-template-columns: 1fr 31%;
+    grid-template-areas: "internal-content internal-links";
+    grid-column-gap: 136px;
+}
+.internal-layout .main-content .container .layout .content {
+    grid-area: internal-content;
+    color: #797979;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+.internal-layout .main-content .container .layout .content h1 {
+    color: #A67D32;
+    font-family: Gelasio;
+    font-size: 55px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 50px;
+    margin: 25px 0;
+}
+.internal-layout .main-content .container .layout .content img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.internal-layout .main-content .container .layout .links {
+    grid-area: internal-links;
+    margin-top: 105px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.29px;
+    line-height: 50px;
+}
+.internal-layout .main-content .container .layout .links a:first-child,
+.internal-layout .main-content .container .layout .links a:nth-child(2) {
+    color: black;
+    display: block;
+    border-bottom: 1px solid var(--gold);
+}
+.internal-layout .main-content .container .layout .links a:nth-child(3) {
+    color: white;
+    display: block;
+    padding: 5px 30px;
+    background-color: var(--gold);
+    text-align: center;
+    margin-top: 30px;
+}
+.internal-layout .main-content .container .layout .links h2 {
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.internal-layout .main-content .container .layout .links .link-footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.internal-layout .main-content .container .layout .links .link-footer .menu-icon {
+    margin-right: 15px;
+}
+.internal-layout .main-content .container .layout .links .link-footer .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-size: 20px;
+    line-height: 50px;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 Responsive                                 */

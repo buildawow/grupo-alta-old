@@ -228,8 +228,7 @@ new Vue({
     },
     computed: {
         randomPublications: function() {
-            return this.publications.sort(function(){return .5 - Math.random()}).slice(0,3)
-
+            return this.publications.sort(function(){return .5 - Math.random()}).slice(0, 3)
         }
     }
     

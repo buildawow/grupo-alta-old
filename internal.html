@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grupo Alta | Nuestro equipo</title>
+    <title>Grupo Alta</title>
     <link href="https://fonts.googleapis.com/css?family=Gelasio:400,700|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
-<body>
+<body class="working">
 
     <nav class="navbar-fullscreen">
 
@@ -159,153 +159,53 @@
 
         <div class="content">
 
-            <div class="landing-layout" id="app">
+            <div class="internal-layout" id="app">
 
-                <div class="landing-hero">
-
-                    
-                    <div class="landing-hero-text">
-                    
-                        <div class="hero-text">
-
-                            <h1>Todo hecho con amor en familia</h1>
-                            <p>
-                                Grupo en la industria de la hospitalidad, 
-                                con fin de crear marcas energéticas. 
-                                Constantemente a la vanguardia de la gastronomía, 
-                                el diseño, la moda y el entretenimiento.
-                                A través del trabajo en equipo cultivamos caminos 
-                                de innovación y curamos experiencias únicas para los ciudadanos del mundo.
-                            </p>
-
-
-                            <img class="guatemalan-100" src="./src/images/landing/100guatemalteco.png" alt="">
+                <section class="hero">
+                    <div class="container item">
+                        <div class="brand item">
+                            <img src="./src/images/internal/brands/logo Adela@2x.jpg" alt="">
                         </div>
-
-                        
-
                     </div>
+                </section>
 
-                    <div class="landing-hero-image">
-                        <div class="black-overlay">
-                            <div class="isotype">
-                                <img src="./src/images/landing/isotype.png" alt="Isotype">
+                <section class="main-content item">
+                    <div class="container item">
+                        <div class="layout">
+                            <div class="content item">
+                                <h1>Helados con amor</h1>
+                                <p>
+                                    Inspirados en la historia de amor de una abuelita, 
+                                    Adela trae lo mejor de los helados en una versión de los años 50’s. 
+                                </p>
+                                <br>
+                                <p>
+                                    Helados 100% artesanales llenos de amor en la ciudad de Guatemala.
+                                </p>
+                                <img src="./src/images/internal/content-images/img_adela1@2x.jpg" alt="Adela foto">
                             </div>
-                        </div>
-                        <img src="./src/images/landing/img_familia@2x.jpg" alt="Familia Grupo Alta">
-                        
-                    </div>
-
-                </div>
-
-                <div class="landing-companies">
-
-                    <div class="companies-sidebar-black"></div>
-    
-                    <div class="companies-grid">
-                        
-                        <div class="title">
-                            
-                            <div class="inner-subtitle">
-                                <h3>Nuestras <span>Empresas</span></h3>
-                            </div>
-
-                            <div class="inner-title">
-                                <h2>¡Nuestro momento es <span>ahora!</span></h2>
-                            </div>
-
-                        </div>
-
-                        <div class="grid">
-
-                            <div class="grid-item">
-                                <img src="" alt="Casa Palopo">
-                                <div class="grid-item-overlay">
-                                    <img src="" alt="Casa Palopo logo">
+                            <div class="links item">
+                                <h2>Redes sociales</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Instagram</a>
+                                    </li>
+                                </ul>
+                                <a href="#">Ir al sitio web</a>
+                                <div class="link-footer">
+                                    <img class="menu-icon" src="./src/images/internal/assets/group.png" alt="menu">
+                                    <div class="link">
+                                        <span>Bizu</span>
+                                        <img src="./src/images/internal/assets/arrow.png" alt="go to">
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="grid-item" v-for="company in companies">
-                                <img v-bind:src="company.image" v-bind:alt="company.name">
-                                <a target="_blank" v-bind:href="company.url" class="grid-item-overlay">
-                                    <img v-bind:src="company.logo" alt="Casa Palopo logo">
-                                </a>
-                            </div>
-
-
                         </div>
-
                     </div>
-
-                </div>
-
-                <div class="publications ">
-
-                    <div class="publications-sidebar-white"></div>
-    
-                    <div class="publication-grid">
-
-                        <div class="publication-grid-title">
-
-                            <h3><span>Publicaciones de</span> nuestras empresas</h3>
-
-                        </div>
-
-                        <div class="publication-block" v-for="publication in randomPublications">
-                            <div class="black-pill">
-                                <span>{{ publication.name }}</span> 
-                                <span v-if="publication.year !== ''" class="divider">|</span>
-                                <span>{{ publication.year }}</span>
-                            </div>
-                            <p>{{ publication.content }}</p>
-                            <a v-bind:href="publication.url" class="source">{{ publication.source }}</a>
-                        </div>
-
-                        <div></div>
-
-                        <div>
-                            <a href="/publications.html" class="more" >Mas publicaciones</a>
-                        </div>
-    
-                    </div>
-
-                </div>
-
-                <div class="instagram-title">
-                    <div class="box">
-                        <p>Nuestras redes</p>
-                        <h3>Síguenos en nuestras redes y conoce más de Grupo Alta</h3>
-                        <p>Facebook <span>•</span> Instagram <span>•</span> #GrupoAltaGt</p>
-                    </div>
-                </div>
-
-                <div class="instagram-feed">
-
-                    <div class="box">
-                        <p>Nuestras redes</p>
-                        <h3>Síguenos en nuestras redes y conoce más de Grupo Alta</h3>
-                        <p>Facebook <span>•</span> Instagram <span>•</span> #GrupoAltaGt</p>
-                    </div>
-                    
-                    <div class="box">
-                        <img src="./src/images/landing/Rectangle-1.png" alt="">
-                    </div>
-                    
-                    <div class="box">
-                        <img src="./src/images/landing/Rectangle-2.png" alt="">
-                    </div>
-                    
-                    <div class="box">
-                        <img src="./src/images/landing/Rectangle-3.png" alt="">
-                    </div>
-                    
-                    <div class="box">
-                        <img src="./src/images/landing/Rectangle-4.png" alt="">
-                    </div>
-                    
-
-
-                </div>
+                </section>
 
             </div>
 
@@ -376,6 +276,7 @@
 <!-- ------------------------------- Scripts ------------------------------- -->
     <script src="./src/js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <script src="./src/js/data.js"></script>
 </body>
 </html>
